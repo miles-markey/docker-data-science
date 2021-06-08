@@ -12,6 +12,7 @@ RUN rm Anaconda3-5.0.1-Linux-x86_64.sh
 ENV PATH /root/anaconda3/bin:$PATH
 # Updating Anaconda packages
 RUN conda update --all
+RUN conda install tensorflow
 # Configuring access to Jupyter
 RUN mkdir /opt/notebooks
 RUN jupyter notebook --generate-config --allow-root
